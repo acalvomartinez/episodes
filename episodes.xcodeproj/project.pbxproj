@@ -22,6 +22,7 @@
 		E2F6623220D1ABAC008CA51B /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6622D20D1ABAC008CA51B /* APIClientTests.swift */; };
 		E2F6623320D1ABAC008CA51B /* ResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6622E20D1ABAC008CA51B /* ResourceTests.swift */; };
 		E2F6623420D1ABAC008CA51B /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E2F6623120D1ABAC008CA51B /* test.json */; };
+		E2F6623620D1AEFD008CA51B /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6623520D1AEFD008CA51B /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E2F6622D20D1ABAC008CA51B /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		E2F6622E20D1ABAC008CA51B /* ResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTests.swift; sourceTree = "<group>"; };
 		E2F6623120D1ABAC008CA51B /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		E2F6623520D1AEFD008CA51B /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		E2F6622420D1AB9D008CA51B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E2F6623720D1AF06008CA51B /* Models */,
 				E2F6622520D1AB9D008CA51B /* Core */,
 			);
 			path = API;
@@ -176,6 +179,14 @@
 				E2F6623120D1ABAC008CA51B /* test.json */,
 			);
 			path = "Canned Responses";
+			sourceTree = "<group>";
+		};
+		E2F6623720D1AF06008CA51B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6623520D1AEFD008CA51B /* Episode.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F98A98239D92171F7D8ACA6D /* Pods */ = {
@@ -374,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F6620320D1A991008CA51B /* ViewController.swift in Sources */,
+				E2F6623620D1AEFD008CA51B /* Episode.swift in Sources */,
 				E2F6622A20D1AB9D008CA51B /* Resource.swift in Sources */,
 				E2F6620120D1A991008CA51B /* AppDelegate.swift in Sources */,
 				E2F6622B20D1AB9D008CA51B /* APIClientError.swift in Sources */,
