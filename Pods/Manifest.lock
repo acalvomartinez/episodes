@@ -1,0 +1,36 @@
+PODS:
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
+  - OHHTTPStubs/Swift (6.1.0):
+    - OHHTTPStubs/Default
+  - Require (2.0.0)
+  - Result (4.0.0)
+
+DEPENDENCIES:
+  - OHHTTPStubs/Swift
+  - Require (~> 2.0)
+  - Result
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - OHHTTPStubs
+    - Require
+    - Result
+
+SPEC CHECKSUMS:
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  Require: f93abc18dda985f665465cf027cea7166455fb28
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+
+PODFILE CHECKSUM: 31982a2f288d63ee9026d2fc635f1eda04fe00b3
+
+COCOAPODS: 1.5.2

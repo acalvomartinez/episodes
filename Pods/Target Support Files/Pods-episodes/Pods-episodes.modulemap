@@ -1,0 +1,6 @@
+framework module Pods_episodes {
+  umbrella header "Pods-episodes-umbrella.h"
+
+  export *
+  module * { export * }
+}
