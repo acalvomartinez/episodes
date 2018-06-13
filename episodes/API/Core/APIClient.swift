@@ -35,6 +35,7 @@ final class APIClient {
       }
 
       let jsonDecoder = JSONDecoder()
+      jsonDecoder.dateDecodingStrategy = .iso8601
 
       guard
         let value = result.value,

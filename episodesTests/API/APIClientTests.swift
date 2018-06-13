@@ -20,8 +20,8 @@ class APIClientTests: XCTestCase {
   }
 
   struct TestResource: Resource {
-    let path: String = "object"
-    let parameters: [String: String] = ["testing": "true"]
+    let path = "object"
+    let parameters = [("name", "value")]
   }
 
   var client: APIClient?
