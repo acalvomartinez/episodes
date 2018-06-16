@@ -15,7 +15,7 @@ import XCTest
 
 class APIClientTests: XCTestCase {
 
-  struct TestModel: Decodable {
+  struct TestModel: Codable {
     let foo: String
   }
 
