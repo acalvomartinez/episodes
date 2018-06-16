@@ -6,6 +6,7 @@
 //  Copyright © 2018 antonio calvo. All rights reserved.
 //
 
+import Require
 import Foundation
 
 enum Method: String {
@@ -51,10 +52,7 @@ extension Resource {
       URLQueryItem(name: String($0), value: String($1))
     }
 
-    guard let finalURL = components.url else {
-      let description = "Unable to retrieve final URL"
-      fatalError(description)
-    }
+    let finalURL = components.url.require(hint: "Unable to retrieve final URL")
 
     var request = URLRequest(url: finalURL)
     request.httpMethod = method.rawValue

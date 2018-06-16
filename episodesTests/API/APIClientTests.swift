@@ -41,7 +41,7 @@ class APIClientTests: XCTestCase {
 
   func testValidResponse() {
     stub(condition: isHost("test.com")) { _ in
-      let stubPath = OHPathForFile("test.json", type(of: self)).require()
+      let stubPath = OHPathForFile("Test.json", type(of: self)).require()
       return fixture(filePath: stubPath, headers: ["Content-Type":"application/json"])
     }
 

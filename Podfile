@@ -5,10 +5,10 @@ target 'episodes' do
   use_frameworks!
 
   pod 'Result'
+  pod 'Require', '~> 2.0'
 
   target 'episodesTests' do
     inherit! :search_paths
-    pod 'Require', '~> 2.0'
     pod 'OHHTTPStubs/Swift'
   end
 

@@ -9,15 +9,17 @@
 import Foundation
 
 struct Episode: Codable {
-  var identifier: String
+  var identifier: Int
   var name: String
-  var airDate: Date
+  var airDate: String
   var code: String
+  var urlCharacters: [String]
   
   private enum CodingKeys: String, CodingKey {
     case identifier = "id"
     case name
     case airDate = "air_date"
-    case code = "code"
+    case code = "episode"
+    case urlCharacters = "characters"
   }
 }

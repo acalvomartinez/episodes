@@ -27,7 +27,7 @@ final class APIClient {
     }
   }
 
-  func object<T: Decodable>(_ resource: Resource, completion: @escaping(Result<T, APIClientError>) -> Void) {
+  func object<T: Codable>(_ resource: Resource, completion: @escaping(Result<T, APIClientError>) -> Void) {
     data(resource) { (result: Result) in
       if let error = result.error {
         completion(Result(error: error))
@@ -35,16 +35,15 @@ final class APIClient {
       }
 
       let jsonDecoder = JSONDecoder()
-      jsonDecoder.dateDecodingStrategy = .iso8601
-
-      guard
-        let value = result.value,
-        let object:T = try? jsonDecoder.decode(T.self, from: value) else {
-          completion(Result(error: .parsingError))
-          return
+      let value = result.value.require()
+      
+      do {
+        let object:T = try jsonDecoder.decode(T.self, from: value)
+        completion(Result(value: object))
+      } catch {
+        print("Parse error: \(error)")
+        completion(Result(error: .parsingError))
       }
-
-      completion(Result(value: object))
     }
   }
 
@@ -74,5 +73,11 @@ final class APIClient {
       }
     }
     task.resume()
+  }
+}
+
+extension URL {
+  static var baseURL: URL {
+    return URL(string: "https://rickandmortyapi.com/api/").require()
   }
 }
