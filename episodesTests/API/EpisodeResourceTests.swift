@@ -15,7 +15,7 @@ class EpisodeResourceTests: XCTestCase {
   
   func testEpisodeResourceIsCreatedProperlly() {
     let resource = EpisodeResource.episodes(page: 1)
-    let resourceURLString = resource.requestWithBaseURL(URL.baseURL).url?.absoluteString
+    let resourceURLString = resource.requestWithBaseURL(URL.episodeURL).url?.absoluteString
     let URLString = "https://rickandmortyapi.com/api/episode?page=1"
     
     XCTAssertEqual(URLString, resourceURLString)

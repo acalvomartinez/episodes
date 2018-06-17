@@ -26,7 +26,9 @@ protocol Resource {
 }
 
 extension Resource {
-
+  var path: String {
+    return ""
+  }
   var method: Method {
     return .GET
   }
@@ -43,10 +45,7 @@ extension Resource {
   func requestWithBaseURL(_ baseURL: URL) -> URLRequest {
     let url = !path.isEmpty ? baseURL.appendingPathComponent(path) : baseURL
 
-    guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-      let description = "Unable to create URL components from \(url)"
-      fatalError(description)
-    }
+    var components = URLComponents(url: url, resolvingAgainstBaseURL: false).require(hint: "Unable to create URL components from \(url)")
 
     components.queryItems = parameters.map {
       URLQueryItem(name: String($0), value: String($1))

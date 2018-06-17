@@ -42,7 +42,6 @@ class ResponseTests: XCTestCase, ModelTestable {
   func testThatAValidJSONShouldCreateAValidResponse() {
     let object: Response<TestModel> = createCodeableFromFile(named: "Response").require()
     
-    XCTAssertNotNil(object)
     XCTAssertEqual(object.info.count, 3)
     XCTAssertEqual(object.info.pages, 1)
     XCTAssertEqual(object.info.next, "https://rickandmortyapi.com/api/tests?page=2")

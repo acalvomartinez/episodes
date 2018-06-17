@@ -15,13 +15,6 @@ enum EpisodeResource {
 }
 
 extension EpisodeResource: Resource {
-  var path: String {
-    switch self {
-    case .episodes:
-      return "episode"
-    }
-  }
-  
   var parameters: [(String, String)] {
     switch self {
     case .episodes(let page):
@@ -30,12 +23,20 @@ extension EpisodeResource: Resource {
   }
 }
 
+extension URL {
+  static var episodeURL: URL {
+    return URL.baseURL.appendingPathComponent("episode")
+  }
+}
+
+typealias EpisodeResponse = Response<Episode>
+
 extension APIClient {
   static var episodeAPIClient: APIClient {
-    return APIClient(baseURL: URL.baseURL)
+    return APIClient(baseURL: URL.episodeURL)
   }
   
-  func episodes(page: Int, completion: @escaping (Result<[Episode], APIClientError>) -> Void) {
+  func episodes(page: Int, completion: @escaping (Result<EpisodeResponse, APIClientError>) -> Void) {
     let resource = EpisodeResource.episodes(page: page)
     object(resource) { result in
       completion(result)

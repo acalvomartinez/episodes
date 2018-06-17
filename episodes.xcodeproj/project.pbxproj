@@ -10,11 +10,11 @@
 		0F87B4F05811CC61B19C1733 /* Pods_episodesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F140BA61933A765FB15807 /* Pods_episodesTests.framework */; };
 		416E66B1F99321BED86358E0 /* Pods_episodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BAF80DAA04E3E78F7C380C /* Pods_episodes.framework */; };
 		E22738F220D5BDEE007EA46F /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = E22738F120D5BDEE007EA46F /* Response.json */; };
-		E22738F420D5C4B6007EA46F /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22738F320D5C4B6007EA46F /* EpisodeTests.swift */; };
 		E22738F620D5C69E007EA46F /* Episode.json in Resources */ = {isa = PBXBuildFile; fileRef = E22738F520D5C69E007EA46F /* Episode.json */; };
 		E22738F820D5CE8D007EA46F /* EpisodeResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22738F720D5CE8D007EA46F /* EpisodeResource.swift */; };
 		E22738FA20D5D7CB007EA46F /* EpisodeResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22738F920D5D7CB007EA46F /* EpisodeResourceTests.swift */; };
-		E2A5B6E820D5B0A9004DE082 /* AllEpisodes.json in Resources */ = {isa = PBXBuildFile; fileRef = E2A5B6E720D5B0A9004DE082 /* AllEpisodes.json */; };
+		E22738FC20D5DBEB007EA46F /* EpisodeAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22738FB20D5DBEB007EA46F /* EpisodeAPIClientTests.swift */; };
+		E2A5B6E820D5B0A9004DE082 /* Episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = E2A5B6E720D5B0A9004DE082 /* Episodes.json */; };
 		E2A5B6EA20D5B0FD004DE082 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5B6E920D5B0FD004DE082 /* Response.swift */; };
 		E2A5B6EF20D5B67C004DE082 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A5B6EE20D5B67C004DE082 /* ResponseTests.swift */; };
 		E2F6620120D1A991008CA51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6620020D1A991008CA51B /* AppDelegate.swift */; };
@@ -50,11 +50,11 @@
 		AAE107FCCA926823F364ED4F /* Pods-episodes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-episodes.release.xcconfig"; path = "Pods/Target Support Files/Pods-episodes/Pods-episodes.release.xcconfig"; sourceTree = "<group>"; };
 		E0CCFF461F80F920D43E3078 /* Pods-episodesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-episodesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-episodesTests/Pods-episodesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E22738F120D5BDEE007EA46F /* Response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
-		E22738F320D5C4B6007EA46F /* EpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		E22738F520D5C69E007EA46F /* Episode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Episode.json; sourceTree = "<group>"; };
 		E22738F720D5CE8D007EA46F /* EpisodeResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeResource.swift; sourceTree = "<group>"; };
 		E22738F920D5D7CB007EA46F /* EpisodeResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeResourceTests.swift; sourceTree = "<group>"; };
-		E2A5B6E720D5B0A9004DE082 /* AllEpisodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllEpisodes.json; sourceTree = "<group>"; };
+		E22738FB20D5DBEB007EA46F /* EpisodeAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeAPIClientTests.swift; sourceTree = "<group>"; };
+		E2A5B6E720D5B0A9004DE082 /* Episodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Episodes.json; sourceTree = "<group>"; };
 		E2A5B6E920D5B0FD004DE082 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		E2A5B6EE20D5B67C004DE082 /* ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
 		E2F661FD20D1A991008CA51B /* episodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = episodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				E2A5B6EE20D5B67C004DE082 /* ResponseTests.swift */,
-				E22738F320D5C4B6007EA46F /* EpisodeTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +185,7 @@
 				E2F6622D20D1ABAC008CA51B /* APIClientTests.swift */,
 				E2F6622E20D1ABAC008CA51B /* ResourceTests.swift */,
 				E22738F920D5D7CB007EA46F /* EpisodeResourceTests.swift */,
+				E22738FB20D5DBEB007EA46F /* EpisodeAPIClientTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			children = (
 				E22738F120D5BDEE007EA46F /* Response.json */,
 				E2F6623120D1ABAC008CA51B /* Test.json */,
-				E2A5B6E720D5B0A9004DE082 /* AllEpisodes.json */,
+				E2A5B6E720D5B0A9004DE082 /* Episodes.json */,
 				E22738F520D5C69E007EA46F /* Episode.json */,
 			);
 			path = "Canned Responses";
@@ -328,7 +328,7 @@
 				E2F6623420D1ABAC008CA51B /* Test.json in Resources */,
 				E22738F620D5C69E007EA46F /* Episode.json in Resources */,
 				E22738F220D5BDEE007EA46F /* Response.json in Resources */,
-				E2A5B6E820D5B0A9004DE082 /* AllEpisodes.json in Resources */,
+				E2A5B6E820D5B0A9004DE082 /* Episodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,9 +433,9 @@
 			files = (
 				E2A5B6EF20D5B67C004DE082 /* ResponseTests.swift in Sources */,
 				E22738FA20D5D7CB007EA46F /* EpisodeResourceTests.swift in Sources */,
-				E22738F420D5C4B6007EA46F /* EpisodeTests.swift in Sources */,
 				E2F6623320D1ABAC008CA51B /* ResourceTests.swift in Sources */,
 				E2F6623220D1ABAC008CA51B /* APIClientTests.swift in Sources */,
+				E22738FC20D5DBEB007EA46F /* EpisodeAPIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
